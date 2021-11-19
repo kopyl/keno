@@ -1,0 +1,60 @@
+@import 'colors'
+
+.parent
+    max-width: 450px
+    height: 360px
+    margin: 5px 5px
+    border-radius: 5px
+    background: $blue-darker
+    padding: 0 5px 5px 5px
+    transition: .1s linear all
+    position: relative
+    z-index: 1
+    top: 0
+    overflow-y: scroll
+
+
+.overlay
+    width: 100vw
+    height: 100vh
+    background-color: black
+    position: fixed
+    top: 0
+    z-index: 0
+    opacity: .5
+    transition: .2s linear opacity
+
+
+.hidden
+    top: 50px
+    opacity: 0
+
+.hiddenOverlay
+    opacity: 0
+
+header
+    position: sticky
+    top: 0px
+    display: grid
+    grid-template-columns: auto auto
+    height: 45px
+    padding: 0 0 0 7px
+    background: $blue-darker
+
+    close-button
+        justify-self: right
+        align-self: center
+
+
+h1
+    display: inline
+    margin: 0
+    font: inherit
+    font-size: 14px
+    font-weight: bold
+    line-height: 45px
+
+div.items
+    display: flex
+    gap: 5px
+    flex-wrap: wrap

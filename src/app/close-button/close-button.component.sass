@@ -1,0 +1,41 @@
+@import 'colors'
+
+.parent
+    position: relative
+    cursor: pointer
+    height: 25px
+    width: 26px
+    background-color: $blue-light
+    border-radius: 4px
+    transition: .1s linear all
+
+    &:hover
+        background-color: $blue-numberboard-bottom
+
+        & .lines
+            transform: rotate(135deg)
+
+button
+    border: none
+    background: none
+    cursor: pointer
+
+.line
+    position: absolute
+    height: 2px
+    width: 14px
+    top: 6px
+    background-color: $blue-faded
+
+    &:nth-child(2)
+        transform: rotate(90deg)
+
+
+.lines
+    position: absolute
+    top: 6px
+    left: 6px
+    width: 14px
+    height: 14px
+    transform: rotate(45deg)
+    transition: .1s linear transform

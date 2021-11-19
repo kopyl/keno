@@ -1,0 +1,38 @@
+<div class="parent"
+[class.hidden]="isHidden"
+*ngIf="isInDom"
+>
+
+    <header>
+        <h1 class="title">
+            Bet,&nbsp;
+            <span class="currency">
+                {{currency}}
+            </span>
+        </h1>
+        <close-button
+        (click)="hide(false)"
+        ></close-button>
+    </header>
+
+    <div class="items">
+
+        <wager-select-item
+        (hideModalEvent)="hide(true)"
+        *ngFor="let option of options"
+        [value]="option.value"
+        [selected]="option.selected"
+        [index]="option.index"
+        >
+        </wager-select-item>
+
+    </div>
+
+</div>
+
+<div class="overlay"
+[class.hiddenOverlay]="isHidden"
+(click)="hide(false)"
+*ngIf="!isHidden"
+>
+</div>
