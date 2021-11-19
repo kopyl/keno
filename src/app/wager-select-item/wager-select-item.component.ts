@@ -8,7 +8,7 @@ import { ConfigService } from '../config.service'
 })
 export class WagerSelectItem implements OnInit {
 
-    @Input() value: any
+    @Input() value: number
     @Input() selected: Boolean = false
     @Input() index: number = 0
 

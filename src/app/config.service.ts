@@ -1,26 +1,19 @@
 import { Injectable } from '@angular/core';
+import * as type from './types';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ConfigService {
 
-
-    backend: any = {
-        currency: "BTC",
-        language: "en",
-        wagerSelect: {
-            selected: 10,
-            options: [
-                0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7,
-                0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4,
-                1.5, 1.6, 1.7, 2.00000001
-            ]
-        }
+    userSettings: any = {
+        animation: true,
+        sound: true,
+        music: true,
     }
 
-    currency: string = this.backend.currency
-    language: string = "en"
+    currency: string
+    language: string
     wagerSelect: any
 
     changeWagerSelectValue(index: number) {
@@ -39,10 +32,9 @@ export class ConfigService {
     }
 
     setupWagerSelect() {
-        this.wagerSelect = this.backend.wagerSelect
         this.wagerSelect.options = (
             this.wagerSelect.options
-            .map((e: any) => {
+            .map((e: type.option) => {
                 return {value: e, selected: false}
             })
         )
@@ -58,11 +50,26 @@ export class ConfigService {
     }
 
     constructor() {
-        this.fetchConfigFromBackend()
-        this.currency = this.backend.currency
-        this.language = this.backend.language
+        this.getConfigFromBackend()
         this.setupWagerSelect()
     }
 
-    fetchConfigFromBackend() {}
+    getConfigFromBackend() {
+        // REPLACE WITH REAL COMFIG FROM BACKEND
+        const backend: type.backend = {
+            currency: "BTC",
+            language: "en",
+            wagerSelect: {
+                selected: 10,
+                options: [
+                    0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7,
+                    0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4,
+                    1.5, 1.6, 1.7, 2.00000001
+                ]
+            }
+        }
+        this.wagerSelect = backend.wagerSelect
+        this.currency = backend.currency
+        this.language = backend.language
+    }
 }

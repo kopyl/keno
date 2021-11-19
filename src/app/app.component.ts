@@ -9,7 +9,7 @@ import { Component, ViewChild } from '@angular/core';
 export class AppComponent {
   title = 'KenoFrontend';
 
-  @ViewChild('ws') wagerSelect: any
+  @ViewChild('ws') wagerSelect: WagerSelect
 
   showWagerselect(){
       this.wagerSelect.show()
