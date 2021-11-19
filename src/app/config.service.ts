@@ -10,26 +10,11 @@ export class ConfigService {
         currency: "BTC",
         language: "en",
         wagerSelect: {
-            selected: 0,
+            selected: 10,
             options: [
-                {value: 0.1, selected: true},
-                {value: 0.2, selected: false},
-                {value: 0.3, selected: false},
-                {value: 0.4, selected: false},
-                {value: 0.5, selected: false},
-                {value: 0.6, selected: false},
-                {value: 0.7, selected: false},
-                {value: 0.8, selected: false},
-                {value: 0.9, selected: false},
-                {value: 1.0, selected: false},
-                {value: 1.1, selected: false},
-                {value: 1.2, selected: false},
-                {value: 1.3, selected: false},
-                {value: 1.4, selected: false},
-                {value: 1.5, selected: false},
-                {value: 1.6, selected: false},
-                {value: 1.7, selected: false},
-                {value: 2.00000001, selected: false},
+                0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7,
+                0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4,
+                1.5, 1.6, 1.7, 2.00000001
             ]
         }
     }
@@ -49,18 +34,27 @@ export class ConfigService {
                     this.wagerSelect.selected = index
                     option.selected = true
                 }
-            }
+        }
+
     }
 
     setupWagerSelect() {
         this.wagerSelect = this.backend.wagerSelect
+        this.wagerSelect.options = (
+            this.wagerSelect.options
+            .map((e: any) => {
+                return {value: e, selected: false}
+            })
+        )
 
         let number = 0
         for (const option of this.wagerSelect.options) {
+            if (number == this.wagerSelect.selected) {
+                option.selected = true
+            }
             option.index = number
             number++
         }
-        // console.log(this.wagerSelect.options)
     }
 
     constructor() {

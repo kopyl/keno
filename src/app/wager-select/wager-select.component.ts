@@ -21,6 +21,11 @@ export class WagerSelect implements OnInit {
 
     ngOnInit(): void {}
 
+    show() {
+        this.isInDom = true
+        setTimeout(() => this.isHidden = false, 200)
+    }
+
     hide(bySelecting: boolean) {
         if (bySelecting) {
             setTimeout(() => this.isHidden = true, 200)

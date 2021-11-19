@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { WagerSelect } from './wager-select/wager-select.component';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'KenoFrontend';
+
+  @ViewChild('ws') wagerSelect: any
+
+  showWagerselect(){
+      this.wagerSelect.show()
+  }
 }
