@@ -1,0 +1,8 @@
+<wager-select #ws></wager-select>
+
+<button
+(click)="showWagerselect()"
+*ngIf="!ws.isInDom"
+>
+Show wager select
+</button>
