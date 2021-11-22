@@ -4,19 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { WagerSelect } from './wager-select/wager-select.component';
 import { WagerSelectItem } from './wager-select-item/wager-select-item.component';
-import { CloseButton } from './close-button/close-button.component';
-import { ButtonsModule } from './modules/buttons/buttons.module'
+import { ButtonsModule } from './modules/buttons/buttons.module';
+import { IconsModule } from './modules/icons/icons.module'
 
 @NgModule({
   declarations: [
     AppComponent,
     WagerSelect,
     WagerSelectItem,
-    CloseButton,
   ],
   imports: [
     BrowserModule,
-    ButtonsModule
+    ButtonsModule,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

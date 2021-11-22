@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClearComponent } from './clear/clear.component';
+import { ClearButton } from './clear/clear.component';
+import { CloseButton } from './close-button/close-button.component';
 
 
 
 @NgModule({
   declarations: [
-    ClearComponent
+    ClearButton,
+    CloseButton
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ClearComponent
+    ClearButton,
+    CloseButton
   ]
 })
 export class ButtonsModule { }

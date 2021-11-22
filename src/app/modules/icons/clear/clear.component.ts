@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'clear-button',
+  selector: 'clear',
   templateUrl: './clear.component.html',
   styleUrls: ['./clear.component.sass']
 })
-export class ClearButton implements OnInit {
+export class ClearComponent implements OnInit {
 
   constructor() { }
 
