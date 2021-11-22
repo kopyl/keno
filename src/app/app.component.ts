@@ -1,5 +1,6 @@
 import { WagerSelect } from './wager-select/wager-select.component';
 import { Component, ViewChild } from '@angular/core';
+// import { ClearComponent } from './modules/buttons/clear/clear.component'
 
 @Component({
   selector: 'app-root',
