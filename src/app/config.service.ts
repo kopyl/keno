@@ -15,6 +15,7 @@ export class ConfigService {
     currency: string
     language: string
     wagerSelect: any
+    translations: type.translations
 
     changeWagerSelectValue(index: number) {
 
@@ -66,10 +67,15 @@ export class ConfigService {
                     0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4,
                     1.5, 1.6, 1.7, 2.00000001
                 ]
+            },
+            translations: {
+                betButton: "Bet",
+                clearButton: "Clear"
             }
         }
         this.wagerSelect = backend.wagerSelect
         this.currency = backend.currency
         this.language = backend.language
+        this.translations = backend.translations
     }
 }

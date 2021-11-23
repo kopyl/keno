@@ -1,6 +1,6 @@
 @import 'colors'
 
-.parent
+:host
     position: relative
     cursor: pointer
     height: 25px
@@ -9,11 +9,30 @@
     border-radius: 4px
     transition: .1s linear all
 
-    &:hover
+    &:hover, &.hovered
         background-color: $blue-numberboard-bottom
 
-        & .lines
+        &.grey
+            background-color: $dark-blue-light
+
+        &:not(.disabled) .lines
             transform: rotate(135deg)
+
+    &.disabled
+        background-color: $blue-numberboard-bottom
+
+        cursor: not-allowed
+
+        &.grey
+            background-color: $dark-blue-light
+
+        opacity: .3
+
+    &.grey
+        background-color: $dark-blue-darker
+
+        & .line
+            background-color: $grey
 
 button
     border: none

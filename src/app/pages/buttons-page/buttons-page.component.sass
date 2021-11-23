@@ -1,17 +1,96 @@
+@import 'colors'
+
 :host
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 10px
+    padding: 1%
+
+div.component-group
     display: grid
     grid-auto-rows: 100px
-    padding: 50px 0 0 50px
+    background: #00000027
+    padding: 30px 30px
+    border-radius: 10px
+    flex-grow: 2
+    min-width: 30%
+    outline: 2px solid #34374b1f
+
+    @media screen and ( max-width:  700px)
+        padding: 30px 10px
+
+
+div.description
+    position: relative
+
+
+small
+    display: inline-block
+    font-size: 14px
+    margin-top: 10px
+    color: $grey
+
+
+code
+    display: inline-block
+    width: fit-content
+    background-color: $code-bg
+    border-radius: 4px
+    padding: 0px 5px 3px 5px
+    color: $code-font
+    border: 2px solid $code-border
+    font-family: 'Roboto Mono', monospace
+    font-size: 14px
+
+    &.disabled
+        color: $disabled-code-font
+        background-color: $disabled-code-bg
+        border: 2px solid $disabled-code-border
+
+h1
+    font-size: calc(1em + 1vmin)
+
 
 p
     display: inline-block
+
+    & > code
+        margin: 0 8px
 
 
 
 div.section
     display: grid
-    grid-template-columns: 150px auto
+    grid-template-columns: auto auto
     align-items: center
 
-div.title
-    grid-template-columns: auto
+
+
+    & *:nth-child(2)
+        justify-self: right
+        // float: right
+        // align-items: right
+        // display: flex
+
+
+
+
+div.components
+    display: grid
+    grid-auto-flow: column
+    // justify-content: start
+    grid-gap: 10px
+
+
+div.bet-button-wrapper
+    display: grid
+    grid-template-columns: auto 250px
+
+big-button
+    grid-column: 2
+
+
+
+// div.section:nth-child(2)
+//     margin-top:

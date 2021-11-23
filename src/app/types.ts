@@ -5,6 +5,10 @@ export interface option {
     selected: boolean
 }
 
+interface languageTranslation {
+    [key: string]: string
+}
+
 interface wagerSelectBackend {
     selected: number,
     options: number[]
@@ -13,7 +17,8 @@ interface wagerSelectBackend {
 export interface backend {
     currency: string,
     language: string,
-    wagerSelect: wagerSelectBackend
+    wagerSelect: wagerSelectBackend,
+    translations: languageTranslation
 }
 
 export interface wagerSelect {
@@ -23,3 +28,5 @@ export interface wagerSelect {
 }
 
 
+
+export type translations = languageTranslation

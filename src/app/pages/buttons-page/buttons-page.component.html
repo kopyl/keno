@@ -1,21 +1,199 @@
-<div class="section title">
-    <h1>Clear table</h1>
+<div class="component-group">
+
+    <div class="section title">
+        <h1>Clear table</h1>
+        <code>&lt;clear-button&gt;</code>
+    </div>
+
+    <div class="section">
+        <p>Normal</p>
+        <clear-button></clear-button>
+    </div>
+
+    <div class="section">
+        <code>:hover</code>
+        <clear-button class='hovered'></clear-button>
+    </div>
+
+    <div class="section">
+        <div class="description">
+            <code class='disabled'>.disabled</code>
+        </div>
+        <clear-button class='disabled'></clear-button>
+    </div>
+
 </div>
 
-<div class="section">
-    <p>Normal</p>
-    <clear-button></clear-button>
+
+
+<div class="component-group">
+
+    <div class="section title">
+        <h1>Close</h1>
+        <code>&lt;close-button&gt;</code>
+    </div>
+
+
+
+    <div class="section">
+        <p>Normal: default, <code>.grey</code></p>
+        <div class="components">
+            <close-button></close-button>
+            <close-button class='grey'></close-button>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="description">
+            <code>:hover</code>
+            <p> &nbsp; : default, <code>.grey</code></p>
+        </div>
+        <div class="components">
+            <close-button class='hovered'></close-button>
+            <close-button class='grey hovered'></close-button>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="description">
+            <code class='disabled'>.disabled</code>
+            <p> &nbsp; : &nbsp; default, <code>.grey</code></p>
+        </div>
+        <div class="components">
+            <close-button class='disabled'></close-button>
+            <close-button class='grey disabled'></close-button>
+        </div>
+    </div>
+
 </div>
 
-<div class="section">
-    <p>Hover</p>
-    <clear-button class='hovered'></clear-button>
+
+
+<div class="component-group">
+    <div class="section title">
+        <h1>Big</h1>
+        <code>&lt;big-button&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+        <div class="bet-button-wrapper">
+            <big-button></big-button>
+        </div>
+    </div>
+    <div class="section">
+        <code>:hover</code>
+        <div class="bet-button-wrapper">
+            <big-button class='hovered'></big-button>
+        </div>
+    </div>
 </div>
 
-<div class="section">
-    <p>Disabled</p>
-    <clear-button class='disabled'></clear-button>
+
+<div class="component-group">
+    <div class="section title">
+        <div class="description">
+            <h1>Wager select item</h1>
+            <small>Not selected</small>
+        </div>
+        <code>&lt;wager-select-item<br>[value]="1"<br>&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+        <wager-select-item [value]="1"></wager-select-item>
+    </div>
+    <div class="section">
+        <code>:hover</code>
+        <wager-select-item [value]="1" class='hovered'></wager-select-item>
+    </div>
 </div>
 
 
-<div class="section"></div> <!-- Empty cell -->
+
+<div class="component-group">
+    <div class="section title">
+        <div class="description">
+            <h1>Wager select item</h1>
+            <small>Selected</small>
+        </div>
+        <code>&lt;wager-select-item<br>[selected]="true"<br>[value]="1"<br>&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+        <wager-select-item [value]="1" [selected]="true"></wager-select-item>
+    </div>
+    <div class="section">
+        <div class="description">
+            <code>:hover</code>
+            <small style='margin-left: 10px;'>(no change)</small>
+        </div>
+        <wager-select-item [value]="1" [selected]="true"></wager-select-item>
+    </div>
+</div>
+
+
+
+
+<div class="component-group">
+    <div class="section title">
+        <h1>Previous hand</h1>
+        <code>&lt;hand-switch-button&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+        <hand-switch-button></hand-switch-button>
+    </div>
+</div>
+
+
+<div class="component-group">
+    <div class="section title">
+        <h1>Increase</h1>
+        <code>&lt;increase-button&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+    </div>
+</div>
+
+
+
+
+<div class="component-group">
+    <div class="section title">
+        <h1>Decrease</h1>
+        <code>&lt;decrease-button&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+    </div>
+</div>
+
+
+<div class="component-group">
+    <div class="section title">
+        <h1>Menu</h1>
+        <code>&lt;menu-button&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+    </div>
+</div>
+
+
+
+<div class="component-group">
+    <div class="section title">
+        <h1>Pay table</h1>
+        <code>&lt;paytable-button&gt;</code>
+    </div>
+    <div class="section">
+        <p>Normal</p>
+    </div>
+</div>
+
+
+
+
+
+
+

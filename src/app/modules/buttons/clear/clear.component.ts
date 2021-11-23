@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../../../config.service'
 
 @Component({
   selector: 'clear-button',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClearButton implements OnInit {
 
-  constructor() { }
+  constructor(private config: ConfigService) { }
+
+  public text: string = this.config.translations.clearButton
 
   ngOnInit(): void {
   }
